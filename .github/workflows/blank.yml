@@ -22,4 +22,4 @@ jobs:
     environment: 
       production
     steps:
-      - run: echo "${{secrets.ORG_TEST}}" | od -A n -t x1
+      - run: echo "${{secrets.TEST_SEC}}" | od -A n -t x1
