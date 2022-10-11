@@ -20,6 +20,6 @@ jobs:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
     steps:
-      - run: gh api -H "Accept: application/vnd.github+json" /orgs/th3vi33z/packages/npm/hello-world-npm/versions
+      - run: gh api /orgs/th3vi33z/packages/npm/hello-world-npm/versions
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
