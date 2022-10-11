@@ -24,6 +24,9 @@ jobs:
         with:
           node-version: '16.x'
           registry-url: 'https://npm.pkg.github.com'
-      - run: npm install @th3vi33z/hello-world-npm@1.0.4
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - run: |
+            curl \
+            -X GET \
+            -H "Accept: application/vnd.github+json" \
+            -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
+             https://api.github.com/orgs/th3vi33z/packages/npm/hello-world-npm/versions    
