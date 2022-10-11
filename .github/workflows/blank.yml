@@ -20,13 +20,6 @@ jobs:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/setup-node@v2
-        with:
-          node-version: '16.x'
-          registry-url: 'https://npm.pkg.github.com'
-      - run: |
-            curl \
-            -X GET \
-            -H "Accept: application/vnd.github+json" \
-            -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
-             https://api.github.com/orgs/th3vi33z/packages/npm/hello-world-npm/versions    
+      - run: gh api -H "Accept: application/vnd.github+json" /orgs/th3vi33z/packages/npm/hello-world-npm/versions
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
