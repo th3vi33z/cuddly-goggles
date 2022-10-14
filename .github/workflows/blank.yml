@@ -14,8 +14,8 @@ on:
   workflow_dispatch:
 
 
-permissions: admin-all
-
+permissions:
+   actions: admin
 
 jobs:
   # This workflow contains a single job called "build"
