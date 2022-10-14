@@ -20,7 +20,7 @@ jobs:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
     steps:
-     - run: gh api --method PATCH /repos/th3vi33z/cuddly-goggles -F private=true
+     - run: gh api --method GET /repos/th3vi33z/cuddly-goggles/pages
        env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         
