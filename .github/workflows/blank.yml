@@ -22,7 +22,7 @@ jobs:
     steps:
       - run: |
           curl --request GET \
+          --header 'Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}' \
+          --header 'content-type: application/json' \
           --url https://api.github.com/app \
-          --header 'authorization: Bearer ${{ secrets.GITHUB_TOKEN }}' \
-          --header 'content-type: application/json' 
         
