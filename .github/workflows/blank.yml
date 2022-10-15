@@ -22,6 +22,6 @@ jobs:
     steps:
      - uses: actions/checkout@v3
      - run: git tag v12345
-     - run: git push origin push
+     - run: git push 
      
         
